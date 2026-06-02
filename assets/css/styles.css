@@ -364,6 +364,13 @@ h3 {
   gap: 1rem;
 }
 
+.flagship-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.55fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
 .species-card {
   overflow: hidden;
   border: 1px solid var(--line);
@@ -371,19 +378,39 @@ h3 {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
 }
 
+.flagship-card,
+.product-proof {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.052), rgba(255, 255, 255, 0.018));
+}
+
 .species-card[hidden] {
   display: none;
 }
 
-.species-card img {
+.species-card img,
+.flagship-card img {
   width: 100%;
   aspect-ratio: 1.16 / 1;
   object-fit: cover;
   background: #080808;
 }
 
+.flagship-card img {
+  aspect-ratio: 1.45 / 1;
+}
+
 .species-content {
   padding: 1.3rem;
+}
+
+.scientific-name {
+  margin: 0.25rem 0 1rem;
+  color: var(--blue);
+  font-weight: 800;
+  letter-spacing: 0.02em;
 }
 
 .tag {
@@ -400,7 +427,9 @@ h3 {
 .fact-list,
 .sop-list,
 .lab-panel,
-.calculator label {
+.calculator label,
+.product-proof,
+.science-note {
   color: #c8c0b2;
   line-height: 1.75;
 }
@@ -426,6 +455,45 @@ h3 {
 .species-content dd {
   color: white;
   text-align: right;
+}
+
+.product-proof {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.product-proof h3 {
+  margin: 0.8rem 0 1rem;
+}
+
+.proof-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.proof-grid div {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.proof-grid span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.proof-grid strong {
+  display: block;
+  margin-top: 0.35rem;
+  color: white;
 }
 
 .red-line {
@@ -468,6 +536,17 @@ h3 {
   margin-right: 0.9rem;
   color: var(--gold);
   font-weight: 800;
+}
+
+.science-note {
+  margin-top: 2rem;
+  border-left: 2px solid rgba(217, 182, 111, 0.72);
+  padding-left: 1.2rem;
+}
+
+.science-note h3 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
 }
 
 .lab-panel,
@@ -518,6 +597,16 @@ h3 {
   display: block;
   margin: 0.35rem 0 1rem;
   color: white;
+}
+
+.community-section {
+  background: linear-gradient(180deg, rgba(73, 166, 255, 0.045), rgba(15, 15, 15, 0));
+}
+
+.community-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
 }
 
 .primary-button.full {
@@ -653,7 +742,8 @@ h3 {
 @media (max-width: 960px) {
   .hero-section,
   .care-layout,
-  .encyclopedia-hero {
+  .encyclopedia-hero,
+  .flagship-layout {
     grid-template-columns: 1fr;
   }
 
@@ -666,6 +756,10 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .flagship-card img {
+    aspect-ratio: 1.1 / 1;
+  }
+
   .hero-media {
     aspect-ratio: 1 / 1.1;
   }
@@ -674,6 +768,20 @@ h3 {
 @media (max-width: 767px) {
   h1 {
     font-size: 2.8rem;
+  }
+
+  .community-actions,
+  .community-actions a {
+    width: 100%;
+  }
+
+  .species-content dl div {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .species-content dd {
+    text-align: left;
   }
 
   .site-footer {

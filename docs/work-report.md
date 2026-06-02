@@ -170,7 +170,7 @@ Please log out and sign in again.
 ## 備註
 
 - 目前網站以靜態 HTML/CSS/JS 建置。
-- 目前仍使用 `sources/` 內 HEIC 與 MOV 原始素材。正式部署時，建議轉換為瀏覽器支援度更高的 WebP/JPG 與 MP4。
+- 網站頁面目前已改用 `assets/media/` 內 WebP 圖片與 MP4 影片，以提升桌機 Chrome/Edge/Safari 的相容性。
 - 若要啟用 GitHub Pages，建議在 GitHub repository 的 Pages 設定中選擇 `main` branch 與 root 目錄。
 
 ## 後續更新：手機版導覽列
@@ -201,6 +201,60 @@ Please log out and sign in again.
 - 品系資料
 - 難度篩選
 - 快速購買 SulaEasy
+
+### 驗證
+
+```bash
+git diff --check
+```
+
+結果：沒有格式錯誤。Git 僅提示 Windows 環境下 LF 之後可能轉為 CRLF，未影響功能。
+
+## 後續更新：手機 Header 與媒體相容性
+
+### 更新摘要
+
+修正手機 Chrome 上方導覽列呈現不穩定，以及桌機瀏覽器無法顯示 HEIC 圖片與 MOV 影片的問題。
+
+### 完成項目
+
+- 將 header 改為 mobile-first 結構，手機預設顯示品牌與 hamburger 選單。
+- 桌機版導覽改用 `.desktop-nav`，不再依賴 Tailwind `hidden md:flex` 控制主要導覽。
+- 加入 CSS/JS 版本參數，降低 GitHub Pages 與手機瀏覽器快取造成舊樣式殘留的機率。
+- 將頁面實際引用的 HEIC 圖片轉為 WebP。
+- 將 Hero MOV 影片轉為 H.264 MP4。
+- 新增 `.gitignore` 排除 `.tmp/` 轉檔工具暫存資料夾。
+- 將 `index.html` 與 `species.html` 素材引用改為 `assets/media/`。
+
+### 相關提交
+
+- `31a272f Fix mobile header layout`
+- `130b909 Use browser compatible media assets`
+
+## 後續更新：金眼藍幽靈旗艦產品改版
+
+### 更新摘要
+
+將首頁主角從一般蘇拉威西蝦形象介紹，升級為「金眼藍幽靈 (Golden-Eye Blue Ghost)」旗艦產品頁。整體文案語氣調整為專業、奢華且具科學公信力，並保留手機瀏覽需求。
+
+### 完成項目
+
+- `index.html`：更新頁面 title 與 meta description，聚焦金眼藍幽靈旗艦品系。
+- `index.html`：改寫 Hero 標題與副標，強調稀有度、金屬藍質感、橘金複眼、兩年以上累代繁殖與高基因穩定性。
+- `index.html`：新增旗艦產品詳細卡片，包含品種名稱、學名、稀有等級、飼養難度與穩定紀錄。
+- `index.html`：將養殖區塊改為 SulaEasy 標準化 SOP，加入 1ml:1L RO 水與三日開缸放蝦流程。
+- `index.html`：新增 KH 穩定性對旗艦品種發色與脫殼重要性的科學敘述。
+- `index.html`：新增「活寶石養殖社群」CTA 與 SulaEasy 快速購買 CTA。
+- `assets/css/styles.css`：新增旗艦產品版面、產品證據卡、科學說明與社群 CTA 樣式。
+- `assets/css/styles.css`：調整手機版產品資料列排版，避免長學名與按鈕在手機上擠壓。
+- `species.html`：同步更新 CSS/JS 版本參數為 `flagship-1`，避免共用樣式快取不一致。
+
+### 手機版處理
+
+- 旗艦產品區塊在 960px 以下改為單欄排列。
+- 社群 CTA 在手機版改為滿版按鈕，提升觸控可用性。
+- 產品資料列在手機版改為直向堆疊，避免長文字擠壓。
+- 保留既有手機 hamburger 導覽，手機可快速前往旗艦品系、標準化 SOP 與活寶石社群。
 
 ### 驗證
 

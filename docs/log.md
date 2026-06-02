@@ -169,3 +169,57 @@ log.md我只要放我對你下的指令跟你的回覆
 已將手機版導覽列改動寫入 docs/log.md 與 docs/work-report.md。
 接著建立 commit 並推送到 GitHub main 分支。
 ```
+
+## 8. 金眼藍幽靈旗艦產品改版
+
+### 使用者指令
+
+```text
+Role: 你是一位專精於高端精品與生技品牌的網頁 UI/UX 設計師與資深文案。
+Task: 請為「蘇拉威西：原生之美 (Sulawesi: Living Gems)」網站進行旗艦產品改版，將主角從一般蘇蝦轉向「金眼藍幽靈 (Golden-Eye Blue Ghost)」。
+Brand Voice: 專業、奢華、具備科學公信力。
+
+需求包含：
+- 首頁 Hero 強調稀有度、金屬藍質感、橘金複眼、兩年以上累代繁殖與高基因穩定性。
+- 建立產品詳細卡片，品種名稱為金眼藍幽靈 (Caridina dennerli var. Golden-Eye Blue Ghost)。
+- 稀有等級標註 Masterpiece / 旗艦限定。
+- 飼養難度為新手友善 2/10，但需穩定環境維持極致發色。
+- 整合 SulaEasy 三日開缸放蝦 SOP，比例為 1ml:1L RO水。
+- 加入 KH 穩定性對旗艦品種發色與脫殼重要性的科學敘述。
+- 加入活寶石養殖社群與 SulaEasy 快速購買 CTA。
+- 採用深灰背景、黑體字、大量留白、精品畫冊與科學百科風格。
+- 不能忘記手機看網站的需求。
+```
+
+### Codex 回覆
+
+```text
+已完成旗艦產品改版，首頁主角已從一般蘇蝦轉為「金眼藍幽靈 Golden-Eye Blue Ghost」。
+
+更新內容包含：
+- Hero 改為強調稀有度、金屬藍質感、橘金複眼、兩年以上累代穩定繁殖。
+- 新增旗艦產品詳細卡片，包含學名、Masterpiece / 旗艦限定、2/10 新手友善與穩定環境需求。
+- SOP 區塊整合 SulaEasy、1ml:1L RO水、三日開缸放蝦流程。
+- 加入 KH 穩定性對發色與脫殼重要性的科學文案。
+- 新增「活寶石養殖社群」CTA。
+- 手機版維持單欄、大按鈕、長文字不擠壓。
+- 更新 CSS/JS cache 版本為 flagship-1。
+
+已執行 git diff --check，沒有格式錯誤。
+```
+
+## 9. 更新日誌與工作報告並推送
+
+### 使用者指令
+
+```text
+幫我把指令寫入log 依此生成工作報告
+之後推送
+```
+
+### Codex 回覆
+
+```text
+已將金眼藍幽靈旗艦產品改版寫入 docs/log.md，並依據本次改版更新 docs/work-report.md。
+接著建立 commit 並推送至 GitHub main 分支。
+```
