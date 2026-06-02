@@ -1,5 +1,31 @@
 const waterCalculator = document.querySelector("[data-water-calculator]");
 const clipLoops = document.querySelectorAll("[data-clip-loop]");
+const mobileMenuToggle = document.querySelector("[data-mobile-menu-toggle]");
+const mobileMenu = document.querySelector("[data-mobile-menu]");
+
+if (mobileMenuToggle && mobileMenu) {
+  const closeMobileMenu = () => {
+    mobileMenu.hidden = true;
+    mobileMenuToggle.setAttribute("aria-expanded", "false");
+  };
+
+  mobileMenuToggle.addEventListener("click", () => {
+    const isOpen = mobileMenuToggle.getAttribute("aria-expanded") === "true";
+
+    mobileMenu.hidden = isOpen;
+    mobileMenuToggle.setAttribute("aria-expanded", String(!isOpen));
+  });
+
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      closeMobileMenu();
+    }
+  });
+}
 
 clipLoops.forEach((video) => {
   const loopEnd = Number(video.dataset.clipLoop);

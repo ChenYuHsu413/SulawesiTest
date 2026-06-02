@@ -172,3 +172,40 @@ Please log out and sign in again.
 - 目前網站以靜態 HTML/CSS/JS 建置。
 - 目前仍使用 `sources/` 內 HEIC 與 MOV 原始素材。正式部署時，建議轉換為瀏覽器支援度更高的 WebP/JPG 與 MP4。
 - 若要啟用 GitHub Pages，建議在 GitHub repository 的 Pages 設定中選擇 `main` branch 與 root 目錄。
+
+## 後續更新：手機版導覽列
+
+### 更新摘要
+
+修正手機版看不到主要導覽列的問題。原本頁首導覽使用 Tailwind `hidden md:flex`，在手機寬度會完全隱藏；本次新增手機版選單按鈕與可展開式導覽面板，讓首頁與品種百科頁在手機上都能快速切換頁面與區塊。
+
+### 完成項目
+
+- `index.html`：新增手機版選單按鈕與手機版導覽面板。
+- `species.html`：新增手機版選單按鈕與手機版導覽面板。
+- `assets/css/styles.css`：新增手機版 header、選單按鈕、展開面板與觸控連結樣式。
+- `assets/js/app.js`：新增手機版選單展開、收合、點選連結後自動關閉，以及切回桌機寬度時關閉選單的互動邏輯。
+
+### 手機版導覽內容
+
+首頁手機版選單包含：
+
+- 品種百科
+- 養殖實驗室
+- 完整百科頁
+- 快速購買 SulaEasy
+
+品種百科頁手機版選單包含：
+
+- 首頁
+- 品系資料
+- 難度篩選
+- 快速購買 SulaEasy
+
+### 驗證
+
+```bash
+git diff --check
+```
+
+結果：沒有格式錯誤。Git 僅提示 Windows 環境下 LF 之後可能轉為 CRLF，未影響功能。

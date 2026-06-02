@@ -13,16 +13,30 @@
   </head>
   <body class="bg-[#1A1A1A] text-stone-100 antialiased">
     <header class="site-header">
-      <a class="brand-mark" href="index.html" aria-label="返回首頁">
-        <span class="brand-dot"></span>
-        <span>Sulawesi: Living Gems</span>
-      </a>
+      <div class="header-main">
+        <a class="brand-mark" href="index.html" aria-label="返回首頁">
+          <span class="brand-dot"></span>
+          <span>Sulawesi: Living Gems</span>
+        </a>
+        <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-mobile-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">開啟導覽選單</span>
+        </button>
+      </div>
       <nav class="hidden gap-8 text-sm text-stone-300 md:flex">
         <a class="nav-link" href="#species">品種百科</a>
         <a class="nav-link" href="#care">養殖實驗室</a>
         <a class="nav-link" href="species.html">完整百科頁</a>
       </nav>
-      <a class="header-cta" href="#sulaeasy">快速購買 SulaEasy</a>
+      <a class="header-cta desktop-cta" href="#sulaeasy">快速購買 SulaEasy</a>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="手機版主選單" data-mobile-menu hidden>
+        <a href="#species">品種百科</a>
+        <a href="#care">養殖實驗室</a>
+        <a href="species.html">完整百科頁</a>
+        <a class="mobile-menu-cta" href="#sulaeasy">快速購買 SulaEasy</a>
+      </nav>
     </header>
 
     <main>
