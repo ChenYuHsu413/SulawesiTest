@@ -109,3 +109,22 @@ log.md我只要放我對你下的指令跟你的回覆
 已將 docs/log.md 改為純對話紀錄，僅保留使用者指令與 Codex 回覆。
 完整工作報告已移至 docs/work-report.md。
 ```
+
+## 5. species 頁面連結確認
+
+### 使用者指令
+
+```text
+我可以問你一下species這個頁面我要從哪邊連結過去?
+```
+
+### Codex 回覆
+
+```text
+目前首頁 index.html 的頁首導覽列已經有「完整百科頁」入口：
+
+<a class="nav-link" href="species.html">完整百科頁</a>
+
+使用者從首頁上方選單點「完整百科頁」即可進入 species.html。
+首頁的「品種百科」則仍連到首頁內部的 #species 簡版區塊。
+```
