@@ -6,6 +6,8 @@
 
 [DemoLink](https://chenyuhsu413.github.io/SulawesiTest/)
 
+![Demo screenshot](sources/demo-screenshot.png)
+
 ## Pages
 
 - `index.html`：首頁、Hero 微距影片、品種介紹、Care SOP、水質參數計算器
