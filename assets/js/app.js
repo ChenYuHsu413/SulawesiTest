@@ -48,11 +48,19 @@ if (waterCalculator) {
     const ph = Number(formData.get("ph"));
     const tds = Number(formData.get("tds"));
     const temp = Number(formData.get("temp"));
+    const blueGhostMode = formData.get("blueGhostMode") === "on";
 
     const issues = [];
+    const optimizationNotes = [];
 
     if (ph < 7.5 || ph > 8.5) {
       issues.push("pH 建議維持在 7.5–8.5");
+    }
+
+    if (blueGhostMode && ph < 7.5) {
+      optimizationNotes.push(
+        "金眼藍幽靈發色優化：pH 偏低時，請優先穩定 KH 緩衝與礦物底盤，避免金屬藍光澤變灰、脫殼節奏受壓",
+      );
     }
 
     if (tds < 100 || tds > 200) {
@@ -64,12 +72,16 @@ if (waterCalculator) {
     }
 
     if (issues.length === 0) {
-      result.textContent = "條件良好：可進入穩定觀察期，少量餵食並維持微生物生態。";
+      result.textContent = blueGhostMode
+        ? "金眼藍幽靈專屬模式：條件良好。可進入穩定觀察期，維持低頻餵食、成熟生物膜與穩定 KH，讓金屬藍與橘金複眼長期清晰。"
+        : "條件良好：可進入穩定觀察期，少量餵食並維持微生物生態。";
       result.dataset.state = "good";
       return;
     }
 
-    result.textContent = `需調整：${issues.join("；")}。可使用 SulaEasy 逐步校正水質，避免一次大幅震盪。`;
+    result.textContent = `需調整：${issues.join("；")}。${optimizationNotes.join("；")}${
+      optimizationNotes.length > 0 ? "。" : ""
+    }可使用 SulaEasy 逐步校正水質，避免一次大幅震盪。`;
     result.dataset.state = "warn";
   });
 }
