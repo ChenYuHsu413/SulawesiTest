@@ -6,12 +6,16 @@
     <title>品種百科 | 蘇拉威西：原生之美</title>
     <meta
       name="description"
-      content="蘇拉威西蝦品種百科，整理白襪蝦、藍幽靈與白蘭花波索系的來源、特色與養殖難度。"
+      content="蘇拉威西蝦品種百科：野生原種（紅衣主教、藍腳波索、小丑蝦）與人工選育色系（金眼藍幽靈、白蘭花）的學名、湖系來源與養殖難度完整對照。"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets/css/styles.css?v=flagship-1" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='%231d3557' stroke='%23ffd700' stroke-width='2'/><circle cx='16' cy='16' r='5' fill='%234f9fd8'/></svg>" />
+    <meta property="og:title" content="品種百科 | 蘇拉威西：原生之美" />
+    <meta property="og:description" content="野生原種 vs 人工選育色系的完整對照與湖系來源。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/media/IMG_6381.webp" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=flagship-2" />
   </head>
-  <body class="bg-[#1A1A1A] text-stone-100 antialiased">
+  <body>
     <header class="site-header">
       <div class="header-main">
         <a class="brand-mark" href="index.html">
@@ -27,14 +31,16 @@
       </div>
       <nav class="desktop-nav" aria-label="桌機版主選單">
         <a class="nav-link" href="index.html">首頁</a>
+        <a class="nav-link" href="#basics">原種 vs 選育</a>
         <a class="nav-link" href="#variants">品系資料</a>
-        <a class="nav-link" href="#filter">難度篩選</a>
+        <a class="nav-link" href="#compare">完整對照</a>
       </nav>
       <a class="header-cta desktop-cta" href="index.html#sulaeasy">快速購買 SulaEasy</a>
       <nav class="mobile-nav" id="mobile-nav" aria-label="手機版主選單" data-mobile-menu hidden>
         <a href="index.html">首頁</a>
+        <a href="#basics">原種 vs 選育</a>
         <a href="#variants">品系資料</a>
-        <a href="#filter">難度篩選</a>
+        <a href="#compare">完整對照</a>
         <a class="mobile-menu-cta" href="index.html#sulaeasy">快速購買 SulaEasy</a>
       </nav>
     </header>
@@ -52,70 +58,232 @@
         <img src="assets/media/IMG_6381.webp" alt="蘇拉威西蝦在黑色火山岩上的微距影像" />
       </section>
 
+      <section class="section-band" id="basics">
+        <div class="section-heading">
+          <p class="eyebrow">Wild vs Selective / 先分清楚兩件事</p>
+          <h2>野生原種，還是人工選育色系？</h2>
+          <p>
+            蘇拉威西蝦最容易混淆的一點：市面上很多名字其實是<strong>同一個物種的人工選育色系</strong>，
+            而不是不同物種。分清楚這件事，才看得懂血統與價格。
+          </p>
+        </div>
+        <div class="concept-grid">
+          <div class="concept-card wild">
+            <span class="tag">Wild Type</span>
+            <h3>野生原種</h3>
+            <p>
+              各自是獨立物種，來自不同湖泊：紅衣主教（<em>Caridina dennerli</em>，瑪塔諾湖）、
+              藍腳波索（<em>C. caerulea</em>，波索湖）、小丑蝦（<em>C. woltereckae</em>，圖蒂湖）等。
+            </p>
+          </div>
+          <div class="concept-card selective">
+            <span class="tag">Selective Line</span>
+            <h3>人工選育色系</h3>
+            <p>
+              金眼藍幽靈、白蘭花、銀河、虎紋都是從<em>紅衣主教（C. dennerli）</em>累代選育出的色系，
+              <strong>野外並不存在</strong>，也是本站旗艦品的來歷。
+            </p>
+          </div>
+        </div>
+        <div class="eco-note">
+          <h3>為什麼優先選擇人工累代個體？</h3>
+          <p>
+            蘇拉威西多數野生蝦種被 IUCN 列為易危至極危，棲地僅限少數古老湖泊。
+            選擇人工累代繁殖的個體，能降低野採壓力，也讓體質更適應缸內環境——這既是負責任的選擇，也是穩定發色的基礎。
+          </p>
+        </div>
+      </section>
+
       <section class="section-band" id="filter">
         <div class="section-heading compact">
           <p class="eyebrow">No Hidden Variants</p>
-          <h2>品種難度篩選器</h2>
-          <p>所有變體直接平鋪顯示；篩選只幫助聚焦，不把資訊藏起來。</p>
+          <h2>依來源分類</h2>
+          <p>所有品系直接平鋪顯示；篩選只幫助聚焦，不把資訊藏起來。</p>
         </div>
-        <div class="filter-bar" role="group" aria-label="依照養殖難度篩選品種">
+        <div class="filter-bar" role="group" aria-label="依照來源類型篩選品種">
           <button class="filter-button is-active" type="button" data-filter="all">全部品系</button>
-          <button class="filter-button" type="button" data-filter="1">入門 1/10</button>
-          <button class="filter-button" type="button" data-filter="2">穩定 2/10</button>
-          <button class="filter-button" type="button" data-filter="4">選育 4/10</button>
+          <button class="filter-button" type="button" data-filter="wild">野生原種</button>
+          <button class="filter-button" type="button" data-filter="selective">人工選育</button>
         </div>
       </section>
 
       <section class="section-band" id="variants">
         <div class="species-grid encyclopedia-grid">
-          <article class="species-card red-line" data-species-card data-difficulty="2">
+          <article class="species-card red-line" data-species-card data-type="wild" data-difficulty="2">
             <img src="assets/media/IMG_6379.webp" alt="經典白襪蝦紅色體色與白手細節" />
             <div class="species-content">
-              <span class="tag">Caridina dennerli inspired</span>
-              <h3>經典白襪蝦</h3>
+              <span class="tag">Wild Type · Lake Matano</span>
+              <h3>經典白襪蝦（紅衣主教）</h3>
+              <p class="scientific-name">Caridina dennerli</p>
               <p>
-                原生於瑪塔諾湖，鮮紅底色與白點、白手形成高反差。覓食時白手連續撥動，
-                是最容易被記住的蘇蝦標誌。
+                原生於瑪塔諾湖的野生原色種，鮮紅底色配白點與白色前足。覓食時白手連續撥動，
+                是最容易辨識的蘇蝦標誌，也是眾多選育色系的血統源頭。
               </p>
               <ul class="fact-list">
-                <li><strong>來源：</strong>瑪塔諾湖</li>
+                <li><strong>學名：</strong>Caridina dennerli</li>
+                <li><strong>來源：</strong>瑪塔諾湖（野生原色）</li>
                 <li><strong>難度：</strong>2/10</li>
                 <li><strong>展示重點：</strong>紅潤體色、白手節奏、黑岩對比</li>
               </ul>
             </div>
           </article>
 
-          <article class="species-card blue-line" data-species-card data-difficulty="4">
-            <img src="assets/media/IMG_6384.webp" alt="藍幽靈型蘇蝦藍金屬質感" />
+          <article class="species-card blue-line" data-species-card data-type="selective" data-difficulty="2">
+            <img src="assets/media/IMG_6389.webp" alt="金眼藍幽靈呈現金屬藍體色與橘金複眼" />
             <div class="species-content">
-              <span class="tag">Blue Ghost Stable Line</span>
-              <h3>藍幽靈型</h3>
+              <span class="tag">Selective Line · 人工選育</span>
+              <h3>金眼藍幽靈</h3>
+              <p class="scientific-name">Caridina dennerli var. Golden-Eye Blue Ghost</p>
               <p>
-                人工選育變異種，具備藍金屬質感與穩定基因特徵。適合作為高端收藏缸的主視覺品系。
+                以紅衣主教累代選育而成的藍色色系，野外並不存在。金屬藍體色配橘金複眼，
+                是本站旗艦品系；照護難度與原生種相近，適合作為高端收藏缸主視覺。
               </p>
               <ul class="fact-list">
-                <li><strong>來源：</strong>人工選育</li>
-                <li><strong>難度：</strong>4/10</li>
-                <li><strong>展示重點：</strong>冷色金屬光、穩定遺傳、稀有收藏感</li>
+                <li><strong>學名：</strong>Caridina dennerli（選育色系）</li>
+                <li><strong>來源：</strong>人工選育（瑪塔諾湖血統）</li>
+                <li><strong>難度：</strong>2/10</li>
+                <li><strong>展示重點：</strong>金屬藍光、橘金複眼、穩定累代</li>
               </ul>
             </div>
           </article>
 
-          <article class="species-card white-line" data-species-card data-difficulty="1">
-            <img src="assets/media/IMG_6389.webp" alt="白蘭花波索系蘇拉威西蝦" />
+          <article class="species-card white-line" data-species-card data-type="selective" data-difficulty="2">
+            <div class="specimen-placeholder" role="img" aria-label="白蘭花標本照片待補">
+              <span>Specimen photo pending</span>
+            </div>
             <div class="species-content">
-              <span class="tag">Lake Poso Beginner Line</span>
-              <h3>白蘭花 / 波索系</h3>
+              <span class="tag">Selective Line · 人工選育</span>
+              <h3>白蘭花</h3>
+              <p class="scientific-name">Caridina dennerli var. White Orchid</p>
               <p>
-                來自波索湖，難度低、適應性佳。適合希望用標準化水質建立第一座蘇蝦缸的飼主。
+                同樣源自瑪塔諾湖 dennerli 的選育色系（又稱 Starry Night），棕褐底色綴以淺色星點。
+                素材庫尚無可靠標定的白蘭花照片，暫以標本位置保留。
               </p>
               <ul class="fact-list">
-                <li><strong>來源：</strong>波索湖</li>
-                <li><strong>難度：</strong>1/10</li>
-                <li><strong>展示重點：</strong>白色花紋、入門友善、低維護系統</li>
+                <li><strong>學名：</strong>Caridina dennerli（選育色系）</li>
+                <li><strong>來源：</strong>人工選育（瑪塔諾湖血統）</li>
+                <li><strong>難度：</strong>2/10</li>
+                <li><strong>展示重點：</strong>星點花紋、柔和對比、收藏層次</li>
               </ul>
             </div>
           </article>
+
+          <article class="species-card gold-line" data-species-card data-type="wild" data-difficulty="1">
+            <div class="specimen-placeholder" role="img" aria-label="藍腳波索標本照片待補">
+              <span>Specimen photo pending</span>
+            </div>
+            <div class="species-content">
+              <span class="tag">Wild Type · Lake Poso</span>
+              <h3>藍腳波索</h3>
+              <p class="scientific-name">Caridina caerulea</p>
+              <p>
+                來自波索湖的野生物種，與瑪塔諾湖的 dennerli 系是不同的種；帶藍色調、適應性最佳，
+                是公認最好養的蘇蝦，適合建立第一座蘇蝦缸。
+              </p>
+              <ul class="fact-list">
+                <li><strong>學名：</strong>Caridina caerulea</li>
+                <li><strong>來源：</strong>波索湖（野生物種）</li>
+                <li><strong>難度：</strong>1/10（最好養）</li>
+                <li><strong>展示重點：</strong>藍色調、入門友善、低維護系統</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band" id="compare">
+        <div class="section-heading">
+          <p class="eyebrow">Full Comparison / 完整對照</p>
+          <h2>蘇拉威西蝦品種對照表</h2>
+          <p>依「野生原種 / 人工選育色系」分類，整理常見品種的學名、湖系來源與難度。難度為缸內飼養的相對參考。</p>
+        </div>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th scope="col">品種</th>
+                <th scope="col">學名</th>
+                <th scope="col">類型</th>
+                <th scope="col">原產地</th>
+                <th scope="col">外觀</th>
+                <th scope="col">難度</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">紅衣主教（白襪）</th>
+                <td><em>Caridina dennerli</em></td>
+                <td><span class="type-pill wild">野生原色</span></td>
+                <td>瑪塔諾湖</td>
+                <td>鮮紅底、白點、白色前足</td>
+                <td>2/10</td>
+              </tr>
+              <tr>
+                <th scope="row">藍腳波索</th>
+                <td><em>Caridina caerulea</em></td>
+                <td><span class="type-pill wild">野生物種</span></td>
+                <td>波索湖</td>
+                <td>藍色調、藍足</td>
+                <td>1/10（最好養）</td>
+              </tr>
+              <tr>
+                <th scope="row">小丑蝦</th>
+                <td><em>Caridina woltereckae</em></td>
+                <td><span class="type-pill wild">野生物種</span></td>
+                <td>圖蒂湖</td>
+                <td>濃烈紅白橫帶</td>
+                <td>進階</td>
+              </tr>
+              <tr>
+                <th scope="row">黃鼻</th>
+                <td><em>Caridina spinata</em></td>
+                <td><span class="type-pill wild">野生物種</span></td>
+                <td>圖蒂湖</td>
+                <td>深色身、黃色吻部</td>
+                <td>進階</td>
+              </tr>
+              <tr>
+                <th scope="row">紅蘭花</th>
+                <td><em>Caridina glaubrechti</em></td>
+                <td><span class="type-pill wild">野生物種</span></td>
+                <td>圖蒂湖</td>
+                <td>紅褐、迷彩斑</td>
+                <td>進階</td>
+              </tr>
+              <tr>
+                <th scope="row">金眼藍幽靈 Blue Ghost</th>
+                <td><em>C. dennerli</em>（選育色系）</td>
+                <td><span class="type-pill selective">人工選育</span></td>
+                <td>瑪塔諾湖血統</td>
+                <td>金屬藍、橘金複眼</td>
+                <td>2/10</td>
+              </tr>
+              <tr>
+                <th scope="row">白蘭花 White Orchid</th>
+                <td><em>C. dennerli</em>（選育色系）</td>
+                <td><span class="type-pill selective">人工選育</span></td>
+                <td>瑪塔諾湖血統</td>
+                <td>棕褐底、淺色星點</td>
+                <td>2/10</td>
+              </tr>
+              <tr>
+                <th scope="row">銀河 Galaxy</th>
+                <td><em>C. dennerli</em>（選育色系）</td>
+                <td><span class="type-pill selective">人工選育</span></td>
+                <td>瑪塔諾湖血統</td>
+                <td>全黑底、白／淺藍點</td>
+                <td>2/10</td>
+              </tr>
+              <tr>
+                <th scope="row">虎紋 Tigris</th>
+                <td><em>C. dennerli</em>（選育色系）</td>
+                <td><span class="type-pill selective">人工選育</span></td>
+                <td>瑪塔諾湖血統</td>
+                <td>紅白／棕白條紋</td>
+                <td>2/10</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
     </main>
@@ -125,6 +293,7 @@
       <p>每一隻蘇蝦，都是古老湖泊替時間留下的細小簽名。</p>
     </footer>
 
-    <script src="assets/js/app.js?v=flagship-1"></script>
+    <script src="assets/js/app.js?v=flagship-2"></script>
+    <script src="assets/js/chatbot.js?v=chatbot-1"></script>
   </body>
 </html>

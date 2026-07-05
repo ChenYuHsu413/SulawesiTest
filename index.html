@@ -8,10 +8,14 @@
       name="description"
       content="金眼藍幽靈 Golden-Eye Blue Ghost 旗艦品系介紹，結合金屬藍質感、橘金複眼與兩年以上累代選育穩定繁殖。"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets/css/styles.css?v=flagship-1" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='%231d3557' stroke='%23ffd700' stroke-width='2'/><circle cx='16' cy='16' r='5' fill='%234f9fd8'/></svg>" />
+    <meta property="og:title" content="金眼藍幽靈 | 蘇拉威西：原生之美" />
+    <meta property="og:description" content="Golden-Eye Blue Ghost 旗艦品系：金屬藍質感、橘金複眼與兩年以上累代選育。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/media/IMG_6389.webp" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=flagship-2" />
   </head>
-  <body class="bg-[#1A1A1A] text-stone-100 antialiased">
+  <body>
     <header class="site-header">
       <div class="header-main">
         <a class="brand-mark" href="index.html" aria-label="返回首頁">
@@ -134,9 +138,9 @@
             </div>
             <div class="species-content">
               <span class="tag">Lake Poso Line</span>
-              <h3>波索系</h3>
-              <p class="scientific-name">Poso Complex</p>
-              <p>目前素材庫中未找到可可靠標定為波索系的照片，暫保留百科位置；待補標本照後再呈現湖系型態與色彩差異。</p>
+              <h3>藍腳波索</h3>
+              <p class="scientific-name">Caridina caerulea</p>
+              <p>波索湖的野生物種，與金眼藍幽靈的 dennerli 血統不同種，以好養著稱。目前素材庫中未找到可可靠標定為波索系的照片，暫保留百科位置；待補標本照後再呈現湖系差異。</p>
             </div>
           </article>
           <article class="species-card gold-line">
@@ -163,6 +167,7 @@
             <div><span>01</span>使用火山岩、成熟濾材與穩定水流，優先培養生物膜與硝化系統</div>
             <div><span>02</span>以少量、低頻餵食維持群體活性，避免有機污染壓過微生物平衡</div>
             <div><span>03</span>每週追蹤 pH、TDS、KH 與脫殼狀態，用數據修正而非憑感覺大幅換水</div>
+            <div><span>04</span>新蝦入缸前以滴流方式緩慢對水 60–90 分鐘，讓 TDS 與溫度平順接軌，降低換水休克與到貨暴斃</div>
           </div>
           <div class="science-note">
             <h3>SulaEasy 專區：開缸三日放蝦的標準化流程。</h3>
@@ -171,6 +176,29 @@
               穩定 KH 能降低 pH 震盪，對旗艦品種的發色、脫殼與橘金複眼清晰度尤其重要；
               這不是讓環境變得複雜，而是把關鍵變因鎖在可管理範圍內。
             </p>
+          </div>
+
+          <div class="water-origin">
+            <h3>還原原生湖泊水質</h3>
+            <p>金眼藍幽靈的血統源自瑪塔諾湖。缸內目標並非複製極端值，而是穩定落在原生湖泊的舒適帶。</p>
+            <div class="table-wrap">
+              <table class="origin-table">
+                <thead>
+                  <tr>
+                    <th scope="col">參數</th>
+                    <th scope="col">瑪塔諾湖原生</th>
+                    <th scope="col">缸內建議目標</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">pH</th><td>約 8.5</td><td>7.5 – 8.5</td></tr>
+                  <tr><th scope="row">TDS</th><td>180 – 220</td><td>100 – 200</td></tr>
+                  <tr><th scope="row">GH</th><td>約 7</td><td>4 – 6</td></tr>
+                  <tr><th scope="row">KH</th><td>約 5</td><td>3 – 8（穩定）</td></tr>
+                  <tr><th scope="row">溫度</th><td>27 – 31°C</td><td>26 – 32°C</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
 
@@ -185,7 +213,8 @@
           <div class="product-callout" id="sulaeasy">
             <p>SulaEasy 水質調整劑</p>
             <strong>開缸三日放蝦，為金眼藍幽靈建立穩定 KH 與礦物底盤</strong>
-            <a class="primary-button full" href="#" aria-label="快速購買 SulaEasy 水質調整劑">一鍵快速購買 SulaEasy</a>
+            <!-- TODO: 將 href 替換為實際商店 / 結帳頁 URL -->
+            <a class="primary-button full" href="#sulaeasy" aria-label="快速購買 SulaEasy 水質調整劑">一鍵快速購買 SulaEasy</a>
           </div>
         </aside>
       </section>
@@ -229,8 +258,13 @@
             溫度 °C
             <input type="number" name="temp" min="0" step="0.1" value="28" />
           </label>
+          <label>
+            KH（dKH）
+            <input type="number" name="kh" min="0" step="0.5" value="5" />
+          </label>
           <button class="primary-button" type="submit">分析參數</button>
           <output class="result-box" data-result>金眼藍幽靈專屬模式已啟用：條件良好，可進入穩定觀察期。</output>
+          <div class="param-gauges" data-gauges hidden></div>
         </form>
       </section>
     </main>
@@ -240,6 +274,7 @@
       <p>為 1–1.5 公分的微型生命，建立一座安靜而精準的展覽館。</p>
     </footer>
 
-    <script src="assets/js/app.js?v=flagship-1"></script>
+    <script src="assets/js/app.js?v=flagship-2"></script>
+    <script src="assets/js/chatbot.js?v=chatbot-1"></script>
   </body>
 </html>
