@@ -5,6 +5,12 @@
   const CHAT_ENDPOINT = "/api/chat";
   const GREETING =
     "嗨！我是活寶石養殖顧問 🦐 想問金眼藍幽靈、水質參數還是開缸流程，都可以問我。";
+  // 開場的快速提問，點一下就會直接送出。可自由增減或修改文字。
+  const SUGGESTIONS = [
+    "金眼藍幽靈的水質怎麼設定？",
+    "新手適合養哪一種蘇蝦？",
+    "開缸多久可以放蝦？",
+  ];
 
   const history = []; // [{ role: "user" | "assistant", content }]
 
@@ -44,6 +50,7 @@
     toggle.setAttribute("aria-expanded", "true");
     if (!greeted) {
       addMessage("assistant", GREETING);
+      renderSuggestions();
       greeted = true;
     }
     input.focus();
@@ -66,12 +73,32 @@
     return el;
   }
 
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const text = input.value.trim();
+  function renderSuggestions() {
+    const wrap = document.createElement("div");
+    wrap.className = "chatbot-suggestions";
+    SUGGESTIONS.forEach((q) => {
+      const chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = "chatbot-chip";
+      chip.textContent = q;
+      chip.addEventListener("click", () => {
+        wrap.remove();
+        sendMessage(q);
+      });
+      wrap.appendChild(chip);
+    });
+    log.appendChild(wrap);
+    log.scrollTop = log.scrollHeight;
+  }
+
+  async function sendMessage(text) {
+    text = (text || "").trim();
     if (!text) return;
 
-    input.value = "";
+    // 送出後就移除開場的快速提問（若還在）
+    const suggestions = log.querySelector(".chatbot-suggestions");
+    if (suggestions) suggestions.remove();
+
     addMessage("user", text);
     history.push({ role: "user", content: text });
 
@@ -102,5 +129,13 @@
       input.focus();
       log.scrollTop = log.scrollHeight;
     }
+  }
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const text = input.value.trim();
+    if (!text) return;
+    input.value = "";
+    sendMessage(text);
   });
 })();

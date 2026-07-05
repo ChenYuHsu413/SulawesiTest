@@ -4,10 +4,7 @@
 
 ## DemoLink
 
-部署到 Vercel 後，把下方連結換成你的 Vercel 網址（例如 `https://sulawesi-test.vercel.app/`）。
-只有 Vercel 版本才有可運作的 AI 聊天機器人；GitHub Pages 版沒有後端，聊天鈕只會顯示錯誤訊息。
-
-<!-- [DemoLink](https://你的專案.vercel.app/) -->
+[DemoLink](https://sulawesi-test.vercel.app/)
 
 ![Demo screenshot](sources/demo-screenshot.png)
 
