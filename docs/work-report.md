@@ -263,3 +263,35 @@ git diff --check
 ```
 
 結果：沒有格式錯誤。Git 僅提示 Windows 環境下 LF 之後可能轉為 CRLF，未影響功能。
+
+## 後續更新：品系分類深度研究與 species.html 科普擴充（2026-07-06）
+
+### 更新摘要
+
+針對蘇拉威西蝦品系做了一次多來源深度研究（含國外一手期刊），並將可上線的結論以符合品牌「科學公信力」定位的方式整合進品種百科頁。研究強調「很多外觀相似的蘇蝦其實是不同種，只能靠活體體色分辨」，並釐清黃環/黃頰、藍色系命名混淆等常見誤解。工具為 Claude Code。
+
+### 完成項目
+
+- 新增 `docs/sulawesi-species-research.md`：完整研究筆記（品系俗名對學名、棲地水質、育種雜交、形態相似卻不同種的分類佐證、保育、來源清單）。
+- 更新 `docs/log.md`：新增第 10 節，記錄本次研究的指令與回覆。
+- `species.html`：新增 `#lookalike`「長得像卻不同種」科普區塊（species flock／活體體色辨識／隱蔽種，附 von Rintelen 團隊佐證），重用既有 `.section-band`、`.concept-card`、`.eco-note` 樣式。
+- `species.html`：桌機版與手機版導覽列新增「長得像卻不同種」連結（`#lookalike`）。
+- `species.html`：完整對照表將「黃鼻」列併為「黃鼻 / 黃頰 / 黃環」，標明同種不同色相（<em>Caridina spinata</em>）。
+- `species.html`：對照表下新增「命名陷阱」提醒（藍幽靈 ≠ 藍月 ≠ 藍魔；紅蜜蜂非蘇拉威西）。
+
+### 設計與相容性
+
+- 全程重用既有 CSS class，未新增任何樣式規則，故未更動 CSS/JS 快取版本號。
+- 沿用既有 `concept-grid` 兩欄卡片與 `eco-note` 資訊框，手機版自動沿用既有響應式規則。
+
+### 待辦
+
+- 使用者將於數日後提供更清晰的實拍照片（黃環/黃頰單隻側面全身含吻部），以做更精細的品系比對；屆時再視結果決定是否於頁面加入實拍對比。
+
+### 驗證
+
+```bash
+git diff --check   # 無格式錯誤
+```
+
+結構檢查：`species.html` 的 section／div／article／table／nav 標籤開合平衡。

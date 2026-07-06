@@ -20,6 +20,12 @@
 - `assets/js/chatbot.js`：AI 養殖顧問聊天視窗（前端）
 - `sources/`：實拍照片與影片素材
 
+## Docs
+
+- `docs/sulawesi-species-research.md`：蘇拉威西蝦品系・分類研究筆記（來源與檢索紀錄）
+- `docs/log.md`：對話紀錄
+- `docs/work-report.md`：工作報告
+
 ## AI 養殖顧問（聊天機器人）
 
 浮動聊天視窗會回答蘇拉威西蝦養殖與 SulaEasy 相關問題。前端為純 JS（`assets/js/chatbot.js`），後端代理為 `api/chat.js`，依序 fallback：Groq → Gemini → OpenRouter（皆可用免費層）。

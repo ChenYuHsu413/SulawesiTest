@@ -223,3 +223,99 @@ Brand Voice: 專業、奢華、具備科學公信力。
 已將金眼藍幽靈旗艦產品改版寫入 docs/log.md，並依據本次改版更新 docs/work-report.md。
 接著建立 commit 並推送至 GitHub main 分支。
 ```
+
+## 10. 蘇拉威西蝦品系・分類深度研究（2026-07-06）
+
+> 本節工具為 Claude Code（非 Codex）。
+
+### 使用者指令
+
+```text
+我們要對蘇拉威西蝦做一次深入research
+請搜尋不限於國外期刊等等相關來源
+資訊不限於白襪 黃環 黃頰 藍幽靈 以及純化配種雜交等相關論文資料討論
+你先去蒐集資料
+```
+
+### 回覆（Claude Code）
+
+```text
+以多來源檢索＋對抗式交叉驗證完成蒐集：20 個來源、87 條論述、經驗證 21 條確認/4 條駁斥。
+涵蓋分類與棲地水質、品系俗名對學名、育種與雜交、人工繁殖、保育現狀。
+（合成階段一度輸出佔位符，已從 journal 復原實際驗證資料。）
+```
+
+### 使用者指令
+
+```text
+先做1.
+黃頰幫我搜尋看看yellow chuck，或有無期刊說明黃環 黃頰/斑 為不同種
+藍幽靈可能要查論壇俗名 因為應該不是學名
+```
+
+### 回覆（Claude Code）
+
+```text
+定向檢索結論：
+- 黃頰＝Caridina cf. spinata，與黃環同為 spinata 品相（"yellow chuck" 為 yellow cheek 誤拼）。
+- 藍幽靈 Blue Ghost＝貿易俗名，指 C. dennerli 藍化選育色型；與藍月(C. trifasciata)、
+  藍魔/OEBD(C. cantonensis) 是三種水質相反的不同蝦。
+```
+
+### 使用者指令
+
+```text
+（就 C. profundicola 陽紋與黃環）你能找到圖片對比嗎
+```
+
+### 回覆（Claude Code）
+
+```text
+取 von Rintelen 團隊 atyidae 站與 Aquadiction 實體照片做並排對比（Artifact 網頁）。
+```
+
+### 使用者指令
+
+```text
+我十分肯定黃環黃頰不同種，好像是德國學家的論文，可以幫我確認或找出圖片嗎？
+黃環＝紅底+一圈白/黃環繞身體含腹部；黃頰/斑＝紅底+黃色橫紋，沒有延伸到腹部
+```
+
+### 回覆（Claude Code）
+
+```text
+查得德國 von Rintelen & Cai (2009) 為關鍵論文：Malili Caridina 是 species flock，
+多種保存後幾乎同形、只能靠活體體色分（striata/woltereckae/glaubrechti 三姊妹種）；
+von Rintelen et al. 2007 證明 C. ensifera 兩色型其實是兩個隱蔽種。
+以 Nicky Bay 標名實拍做「紅底帶紋其實是多個不同種」對比圖。
+```
+
+### 使用者指令
+
+```text
+（提供實拍照片 IMG_7064.HEIC）我直接給你照片好了
+```
+
+### 回覆（Claude Code）
+
+```text
+轉檔判讀：上隻深紅+黃橫帶環繞腹部(黃環)+黃鼻，下隻半透明橘+黃橫紋。
+黃環正是 C. spinata 的診斷特徵（yellow/orange transversal stripe on abdomen），
+故就已發表分類學，黃環與黃頰同屬 C. spinata 體色變異；欲證真為不同種需 DNA 條碼。
+使用者確認兩隻為同種不同個體，數日後補更清晰照片。
+```
+
+### 使用者指令
+
+```text
+好 那前面分析暫時先這樣 整理後你看能不能放到我的網頁裡面?
+之後請幫我把今天的搜尋都記錄下來
+```
+
+### 回覆（Claude Code）
+
+```text
+- 已將完整研究整理為 docs/sulawesi-species-research.md（含來源/檢索紀錄）。
+- 已將本次研究對話補入 docs/log.md 第 10 節。
+- 網頁整合方案待與使用者確認範圍後執行。
+```
