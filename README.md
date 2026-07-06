@@ -22,6 +22,7 @@
 
 ## Docs
 
+- `docs/HANDOFF.md`：跨電腦續作的接手指引（進度、待辦、如何在另一台電腦接續）
 - `docs/sulawesi-species-research.md`：蘇拉威西蝦品系・分類研究筆記（來源與檢索紀錄）
 - `docs/log.md`：對話紀錄
 - `docs/work-report.md`：工作報告
